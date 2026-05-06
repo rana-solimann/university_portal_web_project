@@ -1,58 +1,124 @@
-# Dream University Portal
+# University Portal
 
-This website was developed by my teammates and me as part of our college web development course. The project consists of 17 HTML pages, one CSS stylesheet, and two JavaScript files. Its main focus is on front-end development, with an emphasis on building a complete, structured, and user-friendly website.
+A university portal front-end project designed to provide students and visitors with easy access to academic information, courses, instructors, and student services.
 
-# Here is the structure of the project
+---
 
-UNIVERSITY PORTAL
+## Project Structure
+
+```text
+university-portal/
 │
-├── PUBLIC LAYER (Guest / Visitors)
-│   │
-│   ├── index.html
-│   ├── pages/
-│   │   ├── about.html
-│   │   ├── contact.html
-│   │   └── news.html
-│   │
-│   └── academic/
-│       ├── departments.html
-│       ├── computer-science.html
-│       └── information-security.html
+├── index.html
 │
+├── pages/
+│   ├── about.html
+│   ├── contact.html
+│   └── news.html
 │
-├── ACADEMIC MODULE
-│   │
-│   ├── courses/
-│   │   ├── courses.html
-│   │   ├── course-details.html
-│   │   └── academic-calendar.html
-│   │
-│   └── instructors/
-│       ├── instructors.html
-│       └── instructor-profile.html
+├── academic/
+│   ├── departments.html
+│   ├── computer-science.html
+│   └── information-security.html
 │
+├── courses/
+│   ├── courses.html
+│   ├── course-details.html
+│   └── academic-calendar.html
 │
-├── STUDENT SYSTEM
-│   │
-│   ├── auth/
-│   │   └── login.html
-│   │
-│   ├── student/
-│   │   ├── dashboard.html
-│   │   ├── profile.html
-│   │   ├── grades.html
-│   │   └── timetable.html
+├── instructors/
+│   ├── instructors.html
+│   └── instructor-profile.html
 │
+├── student/
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── profile.html
+│   ├── grades.html
+│   └── timetable.html
 │
-├── FRONTEND CORE
-│   │
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── js/
-│   │   ├── login.js
-│   │   └── students.js
-│   │
-│   └── images/
+├── css/
+│   └── style.css
 │
-└── 
+├── js/
+│   ├── login.js
+│   └── students.js
+│
+└── images/
+```
+
+---
+
+## Modules Overview
+
+### Public Pages
+Accessible to all visitors.
+
+- `index.html` — landing page
+- `about.html` — university overview
+- `contact.html` — contact information
+- `news.html` — latest announcements
+
+### Academic Information
+Department-related content.
+
+- `departments.html`
+- `computer-science.html`
+- `information-security.html`
+
+### Courses System
+Course-related academic pages.
+
+- `courses.html`
+- `course-details.html`
+- `academic-calendar.html`
+
+### Instructors
+Faculty-related pages.
+
+- `instructors.html`
+- `instructor-profile.html`
+
+### Student System
+Student-only pages after login.
+
+- `login.html`
+- `dashboard.html`
+- `profile.html`
+- `grades.html`
+- `timetable.html`
+
+---
+
+## User Flow
+
+```text
+Visitor enters → Home page
+       ↓
+Browse public pages / academic information
+       ↓
+Explore courses and instructors
+       ↓
+Login
+       ↓
+Student dashboard
+       ├── View profile
+       ├── Check grades
+       └── View timetable
+```
+
+---
+
+## Team Responsibilities
+
+- **Samy** — academic information pages
+- **Nour** — courses and instructors
+- **Rana** — student system and JavaScript
+
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
