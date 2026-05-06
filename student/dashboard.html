@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">UniPortal</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+            <a href="grades.html">Grades</a>
+        </nav>
+        <a href="#" class="login-btn" onclick="logout(); return false;">Logout</a>
+    </header>
+
+    <section class="dashboard-page">
+
+        <h1 class="dashboard-welcome" id="welcome-msg">Welcome back!</h1>
+        <p class="dashboard-sub">Semester 2 · Academic Year 2025/2026</p>
+
+        <!-- Stats Row -->
+        <div class="stats-row">
+
+            <div class="stat-box">
+                <div class="stat-icon">📚</div>
+                <div class="stat-number">6</div>
+                <div class="stat-label">Enrolled Courses</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-number">3.6</div>
+                <div class="stat-label">Current GPA</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon">✅</div>
+                <div class="stat-number">92%</div>
+                <div class="stat-label">Attendance</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon">📝</div>
+                <div class="stat-number">3</div>
+                <div class="stat-label">Pending Tasks</div>
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <h2 class="section-title">Quick Access</h2>
+        <div class="cards">
+            <div class="card"><a href="profile.html">👤 My Profile</a></div>
+            <div class="card"><a href="grades.html">📊 My Grades</a></div>
+            <div class="card"><a href="../pages/news.html">📢 Announcements</a></div>
+        </div>
+
+        <!-- Recent Grades -->
+        <h2 class="section-title">Recent Grades</h2>
+        <table class="grades-table">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Grade</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Database Systems</td>
+                    <td><span class="grade-a">A</span></td>
+                    <td>93%</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td><span class="grade-a">A−</span></td>
+                    <td>89%</td>
+                </tr>
+                <tr>
+                    <td>Data Structures</td>
+                    <td><span class="grade-b">B+</span></td>
+                    <td>84%</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems</td>
+                    <td><span class="grade-b">B</span></td>
+                    <td>80%</td>
+                </tr>
+                <tr>
+                    <td>Mathematics III</td>
+                    <td><span class="grade-c">C+</span></td>
+                    <td>74%</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>UniPortal</h3>
+                <p>Your one-stop academic portal.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="../academic/departments.html">Departments</a>
+                <a href="../courses/courses.html">Courses</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: support@uniportal.edu</p>
+                <p>Phone: +20 100 000 0000</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 UniPortal. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/students.js"></script>
+
+</body>
+</html>

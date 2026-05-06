@@ -122,7 +122,7 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* ================= LOGIN CARD ================= */
+/* ================= LOGIN CARD (homepage) ================= */
 .login-card {
     width: 340px;
     background: rgba(255, 255, 255, 0.85);
@@ -285,5 +285,443 @@ nav a:hover {
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ================= Contact Section ================= */
+.contact-form-card {
+    background: white;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 8px 24px rgba(127, 179, 255, 0.13);
+}
+
+.contact-form-card h3 {
+    color: #5b9dff;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 1px solid #e3ecff;
+    border-radius: 10px;
+    outline: none;
+    background: #f7f9ff;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form-card textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form-card button {
+    width: 100%;
+    padding: 12px;
+    background: #ffb6c9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.contact-form-card button:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================================
+   STUDENT PAGES — LOGIN, DASHBOARD, PROFILE, GRADES
+   ================================================ */
+
+
+/* ================= LOGIN PAGE ================= */
+
+.login-page {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #eef4ff, #f7f9ff);
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(91, 157, 255, 0.12);
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-box h2 {
+    color: #5b9dff;
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+.login-subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.login-box label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #5b7aa0;
+    margin-bottom: 6px;
+    margin-top: 14px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #e3ecff;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    background: #f7f9ff;
+    color: #2e3a4f;
+}
+
+.login-box input:focus {
+    border-color: #5b9dff;
+    background: white;
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 13px;
+    background: #5b9dff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 22px;
+    transition: 0.3s;
+}
+
+.login-submit-btn:hover {
+    background: #4a8df0;
+    transform: translateY(-2px);
+}
+
+.error-msg {
+    background: #fff0f3;
+    border: 1px solid #ffb6c9;
+    color: #c0324f;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    color: #5b9dff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= DASHBOARD PAGE ================= */
+
+.dashboard-page {
+    padding: 40px 7%;
+}
+
+.dashboard-welcome {
+    font-size: 30px;
+    color: #2e3a4f;
+    margin-bottom: 6px;
+}
+
+.dashboard-sub {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Stats Row — shared with grades page */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 36px;
+}
+
+.stat-box {
+    background: white;
+    border-radius: 16px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(91, 157, 255, 0.09);
+    border: 1px solid #eef4ff;
+}
+
+.stat-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5b9dff;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 20px;
+    color: #2e3a4f;
+    margin-bottom: 16px;
+    margin-top: 10px;
+}
+
+/* Cards on dashboard — link style */
+.card a {
+    text-decoration: none;
+    color: #2e3a4f;
+    font-size: 15px;
+}
+
+.card a:hover {
+    color: #5b9dff;
+}
+
+/* Grades Table — shared with dashboard and grades page */
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(91, 157, 255, 0.09);
+    margin-bottom: 36px;
+}
+
+.grades-table th {
+    background: #f7f9ff;
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 13px;
+    color: #5b7aa0;
+    border-bottom: 1px solid #eef4ff;
+}
+
+.grades-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #f0f5ff;
+    font-size: 14px;
+    color: #2e3a4f;
+}
+
+.grades-table tr:last-child td {
+    border-bottom: none;
+}
+
+.grades-table tr:hover td {
+    background: #fafcff;
+}
+
+/* Grade letter badges */
+.grade-a {
+    background: #d4f4e4;
+    color: #1a7a42;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.grade-b {
+    background: #dceeff;
+    color: #1a5fa0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.grade-c {
+    background: #fff3d4;
+    color: #8a6000;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* ================= PROFILE PAGE ================= */
+
+.profile-page {
+    padding: 40px 7%;
+}
+
+.profile-header-card {
+    background: linear-gradient(135deg, #5b9dff, #a0c4ff);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.profile-header-info h2 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.profile-header-info p {
+    font-size: 14px;
+    opacity: 0.88;
+    margin-bottom: 8px;
+}
+
+.profile-status {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Profile grid of cards */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(91, 157, 255, 0.09);
+    border: 1px solid #eef4ff;
+}
+
+.profile-card h3 {
+    font-size: 14px;
+    color: #5b9dff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f5ff;
+    font-size: 14px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.info-value {
+    color: #2e3a4f;
+    font-weight: 600;
+    text-align: right;
+}
+
+
+/* ================= GRADES PAGE ================= */
+
+.grades-page {
+    padding: 40px 7%;
+}
+
+.page-title {
+    font-size: 28px;
+    color: #2e3a4f;
+    margin-bottom: 24px;
+}
+
+
+/* ================= RESPONSIVE — STUDENT PAGES ================= */
+
+@media (max-width: 900px) {
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-header-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .login-box {
+        padding: 28px 20px;
+    }
+
+    .grades-table th:nth-child(3),
+    .grades-table td:nth-child(3) {
+        display: none;
     }
 }

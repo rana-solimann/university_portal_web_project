@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Profile</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">UniPortal</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+            <a href="grades.html">Grades</a>
+        </nav>
+        <a href="#" class="login-btn" onclick="logout(); return false;">Logout</a>
+    </header>
+
+    <section class="profile-page">
+
+        <!-- Profile Header Card -->
+        <div class="profile-header-card">
+            <div class="profile-avatar" id="profile-avatar">S</div>
+            <div class="profile-header-info">
+                <h2 id="profile-name">Student Name</h2>
+                <p id="profile-dept">Department of Computer Science</p>
+                <span class="profile-status">Active Student</span>
+            </div>
+        </div>
+
+        <!-- Info Grid -->
+        <div class="profile-grid">
+
+            <!-- Personal Info -->
+            <div class="profile-card">
+                <h3>Personal Information</h3>
+
+                <div class="info-row">
+                    <span class="info-label">Full Name</span>
+                    <span class="info-value" id="pi-name">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Student ID</span>
+                    <span class="info-value" id="pi-id">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Date of Birth</span>
+                    <span class="info-value" id="pi-dob">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Gender</span>
+                    <span class="info-value" id="pi-gender">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Nationality</span>
+                    <span class="info-value">Egyptian</span>
+                </div>
+            </div>
+
+            <!-- Academic Info -->
+            <div class="profile-card">
+                <h3>Academic Information</h3>
+
+                <div class="info-row">
+                    <span class="info-label">Department</span>
+                    <span class="info-value" id="pi-dept">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Level</span>
+                    <span class="info-value" id="pi-level">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Semester</span>
+                    <span class="info-value">Semester 2 – 2025/2026</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">GPA</span>
+                    <span class="info-value">3.6 / 4.0</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Status</span>
+                    <span class="info-value">Active</span>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="profile-card">
+                <h3>Contact Information</h3>
+
+                <div class="info-row">
+                    <span class="info-label">Email</span>
+                    <span class="info-value" id="pi-email">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Phone</span>
+                    <span class="info-value" id="pi-phone">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Address</span>
+                    <span class="info-value">Cairo, Egypt</span>
+                </div>
+            </div>
+
+            <!-- Enrolled Courses -->
+            <div class="profile-card">
+                <h3>Enrolled Courses</h3>
+
+                <div class="info-row">
+                    <span class="info-label">CS301</span>
+                    <span class="info-value">Database Systems</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">CS302</span>
+                    <span class="info-value">Web Development</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">CS303</span>
+                    <span class="info-value">Data Structures</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">CS304</span>
+                    <span class="info-value">Operating Systems</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">MATH301</span>
+                    <span class="info-value">Mathematics III</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">CS305</span>
+                    <span class="info-value">Info Security</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>UniPortal</h3>
+                <p>Your one-stop academic portal.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="../academic/departments.html">Departments</a>
+                <a href="../courses/courses.html">Courses</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: support@uniportal.edu</p>
+                <p>Phone: +20 100 000 0000</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 UniPortal. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/students.js"></script>
+
+</body>
+</html>

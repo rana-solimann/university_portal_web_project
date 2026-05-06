@@ -13,15 +13,15 @@
         <div class="logo">UniPortal</div>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Departments</a>
-            <a href="#">Courses</a>
-            <a href="#">News</a>
-            <a href="#">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="pages/about.html">About</a>
+            <a href="academic/departments.html">Departments</a>
+            <a href="courses/courses.html">Courses</a>
+            <a href="pages/news.html">News</a>
+            <a href="pages/contact.html">Contact</a>
         </nav>
 
-        <a href="#" class="login-btn">Login</a>
+        <a href="student/login.html" class="login-btn">Login</a>
     </header>
 
     <section class="hero">
@@ -33,8 +33,8 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="#" class="primary-btn">Explore Departments</a>
-                <a href="#" class="secondary-btn">View Courses</a>
+                <a href="academic/departments.html" class="primary-btn">Explore Departments</a>
+                <a href="courses/courses.html" class="secondary-btn">View Courses</a>
             </div>
         </div>
 
@@ -42,7 +42,7 @@
             <h3>Student Login</h3>
             <input type="text" placeholder="Username" />
             <input type="password" placeholder="Password" />
-            <button>Login</button>
+            <button onclick="window.location.href='student/login.html'">Login</button>
         </div>
     </section>
 
@@ -50,10 +50,10 @@
         <h2>Quick Access</h2>
 
         <div class="cards">
-            <div class="card">Departments</div>
-            <div class="card">Courses</div>
-            <div class="card">Events</div>
-            <div class="card">News</div>
+            <a href="academic/departments.html" class="card">Departments</a>
+            <a href="courses/courses.html" class="card">Courses</a>
+            <a href="pages/news.html" class="card">Events</a>
+            <a href="pages/news.html" class="card">News</a>
         </div>
     </section>
 
@@ -66,10 +66,10 @@
 
             <div class="footer-links">
                 <h4>Quick Links</h4>
-                <a href="#">Home</a>
-                <a href="#">Departments</a>
-                <a href="#">Courses</a>
-                <a href="#">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="academic/departments.html">Departments</a>
+                <a href="courses/courses.html">Courses</a>
+                <a href="pages/contact.html">Contact</a>
             </div>
 
             <div class="footer-contact">
@@ -80,6 +80,10 @@
         </div>
         <p class="footer-bottom">&copy; 2026 UniPortal. All rights reserved.</p>
     </footer>
+
+    <script src="js/login.js"></script>
+    <script src="js/students.js"></script>
+
 </body>
 
 </html>

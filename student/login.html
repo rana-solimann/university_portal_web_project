@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Student Login</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">UniPortal</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../pages/about.html">About</a>
+            <a href="../academic/departments.html">Departments</a>
+            <a href="../courses/courses.html">Courses</a>
+        </nav>
+        <a href="login.html" class="login-btn">Login</a>
+    </header>
+
+    <section class="login-page">
+
+        <div class="login-box">
+            <h2>Student Login</h2>
+            <p class="login-subtitle">Enter your student ID and password to access your portal</p>
+
+            <div id="error-msg" class="error-msg">Wrong ID or password. Please try again.</div>
+
+            <label for="username">Student ID</label>
+            <input type="text" id="username" placeholder="e.g. 2310001" />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" />
+
+            <button class="login-submit-btn" onclick="handleLogin()">Login</button>
+
+            <a href="../index.html" class="back-link">← Back to Home</a>
+        </div>
+
+    </section>
+
+    <script src="../js/students.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+</html>
