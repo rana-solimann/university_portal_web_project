@@ -1,1 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Courses - Dream University</title>
+    <style>
+ 
+      .page-hero {
+        background: linear-gradient(135deg, #eef4ff, #dbe7ff);
+        padding: 60px 7% 40px;
+        text-align: center;
+      }
 
+      .page-hero h1 {
+        font-size: 42px;
+        color: #2e3a4f;
+        margin-bottom: 12px;
+      }
+
+      .page-hero p {
+        font-size: 17px;
+        color: #5b7aab;
+      }
+
+  
+      .filters-bar {
+        padding: 30px 7% 10px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .filter-btn {
+        padding: 9px 20px;
+        border-radius: 30px;
+        border: 2px solid #5b9dff;
+        background: white;
+        color: #5b9dff;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 14px;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: #5b9dff;
+        color: white;
+      }
+
+      .search-input {
+        margin-left: auto;
+        padding: 10px 18px;
+        border: 2px solid #e3ecff;
+        border-radius: 30px;
+        outline: none;
+        font-size: 14px;
+        width: 240px;
+        transition: 0.3s;
+        background: white;
+        color: #2e3a4f;
+      }
+
+      .search-input:focus {
+        border-color: #5b9dff;
+      }
+
+      /* ================= COURSES GRID ================= */
+      .courses-section {
+        padding: 30px 7% 70px;
+      }
+
+      .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      /* ================= COURSE CARD ================= */
+      .course-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(127, 179, 255, 0.13);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .course-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 36px rgba(127, 179, 255, 0.22);
+      }
+
+      .course-card-header {
+        padding: 22px 22px 14px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .course-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        flex-shrink: 0;
+      }
+
+      .course-icon.blue   { background: linear-gradient(135deg, #dff3ff, #cfe8ff); }
+      .course-icon.pink   { background: linear-gradient(135deg, #ffe4ec, #ffd1dc); }
+      .course-icon.purple { background: linear-gradient(135deg, #f1ecff, #e2dbff); }
+      .course-icon.green  { background: linear-gradient(135deg, #e2fff0, #c8f5df); }
+      .course-icon.yellow { background: linear-gradient(135deg, #fff8db, #fff0b0); }
+      .course-icon.teal   { background: linear-gradient(135deg, #dbfaf5, #b8f0e8); }
+
+      .course-meta h3 {
+        font-size: 16px;
+        color: #2e3a4f;
+        margin-bottom: 4px;
+      }
+
+      .course-meta span {
+        font-size: 13px;
+        color: #5b9dff;
+        font-weight: 600;
+      }
+
+      .course-card-body {
+        padding: 0 22px 16px;
+        flex: 1;
+      }
+
+      .course-card-body p {
+        font-size: 14px;
+        color: #7a8fad;
+        line-height: 1.6;
+      }
+
+      .course-tags {
+        padding: 0 22px 16px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        background: #eef4ff;
+        color: #5b9dff;
+      }
+
+      .tag.pink   { background: #fff0f4; color: #ff7fa0; }
+      .tag.purple { background: #f3f0ff; color: #9b7fe8; }
+      .tag.green  { background: #edfff5; color: #35b87a; }
+
+      .course-card-footer {
+        padding: 14px 22px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #f0f4ff;
+      }
+
+      .course-info {
+        display: flex;
+        gap: 14px;
+        font-size: 13px;
+        color: #94a3b8;
+      }
+
+      .course-info span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .details-btn {
+        padding: 8px 18px;
+        background: #5b9dff;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .details-btn:hover {
+        transform: translateY(-2px);
+        background: #3d87f5;
+      }
+
+      /* ================= RESPONSIVE ================= */
+      @media (max-width: 900px) {
+        .courses-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .search-input {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .courses-grid {
+          grid-template-columns: 1fr;
+        }
+        .page-hero h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="logo">UniPortal</div>
+      <nav>
+        <a href="##">Home</a>
+        <a href="##">About</a>
+        <a href="##">Departments</a>
+        <a href="##" style="color:#ffb6c9;">Courses</a>
+        <a href="##">News</a>
+        <a href="##">Contact</a>
+        <a href="instructors.html">Instructors</a>
+      </nav>
+      
+    </header>
+<main>
+   
+    <section class="page-hero">
+      <h1>📚 All Courses</h1>
+      <p>Browse all available courses across departments</p>
+    </section>
+
+  
+    <div class="filters-bar">
+      <input type="text" class="search-input" placeholder="🔍 Search courses..." style="margin-left:0; width:300px;" />
+    </div>
+
+  
+    <section class="courses-section">
+      <div class="courses-grid">
+
+        
+        <div class="course-card">
+          <div class="course-card-header">
+            <div class="course-icon yellow">🌐</div>
+            <div class="course-meta">
+              <h3>Web Programming</h3>
+            
+            </div>
+          </div>
+          <div class="course-card-body">
+            <p>Build modern websites using HTML, CSS, and JavaScript. Includes responsive design and basic frameworks.</p>
+          </div>
+          <div class="course-tags">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag purple">JS</span>
+          </div>
+          <div class="course-card-footer">
+            <div class="course-info">
+              <span>⏱ 3 hrs</span>
+              <span>👤 Dr.Amr</span>
+            </div>
+            <a href="course-details.html" class="details-btn">Details</a>
+          </div>
+        </div>
+
+    
+    
+      
+        <div class="course-card">
+          <div class="course-card-header">
+            <div class="course-icon blue">💻</div>
+            <div class="course-meta">
+              <h3>Introduction to Programming</h3>
+           
+            </div>
+          </div>
+          <div class="course-card-body">
+            <p>Learn the fundamentals of programming using Python. Covers variables, loops, functions, and basic algorithms.</p>
+          </div>
+          <div class="course-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Beginner</span>
+          </div>
+          <div class="course-card-footer">
+            <div class="course-info">
+              <span>⏱ 3 hrs</span>
+              <span>👤 Dr. Ahmed</span>
+            </div>
+            <a href="##" class="details-btn">Details</a>
+          </div>
+        </div>
+
+     
+        <div class="course-card">
+          <div class="course-card-header">
+            <div class="course-icon pink">🔐</div>
+            <div class="course-meta">
+              <h3>Network Security</h3>
+            
+            </div>
+          </div>
+          <div class="course-card-body">
+            <p>Understand threats, firewalls, encryption, and protocols used in modern network security environments.</p>
+          </div>
+          <div class="course-tags">
+            <span class="tag pink">Security</span>
+            <span class="tag">Intermediate</span>
+          </div>
+          <div class="course-card-footer">
+            <div class="course-info">
+              <span>⏱ 4 hrs</span>
+              <span>👤 Dr. Sara</span>
+            </div>
+            <a href="##" class="details-btn">Details</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+        
+  </main>
+ 
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>UniPortal</h3>
+          <p>Your one-stop academic portal for courses, announcements, and student services.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="##">Home</a>
+          <a href="##">Departments</a>
+          <a href="##">Courses</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Email: support@uniportal.edu</p>
+          <p>Phone: +20 100 000 0000</p>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 UniPortal. All rights reserved.</p>
+    </footer>
+
+  
+
+  </body>
+</html>
