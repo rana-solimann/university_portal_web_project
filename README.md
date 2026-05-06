@@ -35,7 +35,6 @@ university-portal/
 │   ├── dashboard.html
 │   ├── profile.html
 │   ├── grades.html
-│   └── timetable.html
 │
 ├── css/
 │   └── style.css
