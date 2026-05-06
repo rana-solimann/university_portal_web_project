@@ -86,7 +86,6 @@ Student-only pages after login.
 - `dashboard.html`
 - `profile.html`
 - `grades.html`
-- `timetable.html`
 
 ---
 
