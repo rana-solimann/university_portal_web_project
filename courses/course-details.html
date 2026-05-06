@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Web Programming - Dream University</title>
+    <style>
+
+  
+      .page-hero {
+        background: linear-gradient(135deg, #fff8db, #fff0b0);
+        padding: 50px 7% 40px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .page-hero-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #fff8db, #ffe566);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        box-shadow: 0 8px 24px rgba(255, 200, 0, 0.2);
+        flex-shrink: 0;
+      }
+
+      .page-hero-text h1 {
+        font-size: 36px;
+        color: #2e3a4f;
+        margin-bottom: 8px;
+      }
+
+      .page-hero-text p {
+        font-size: 15px;
+        color: #5b7aab;
+      }
+
+      .page-hero-tags {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        background: #eef4ff;
+        color: #5b9dff;
+      }
+
+      .tag.purple { background: #f3f0ff; color: #9b7fe8; }
+      .tag.yellow { background: #fffbe6; color: #c49a00; }
+
+ 
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 30px 7% 0;
+        color: #5b9dff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .back-btn:hover {
+        gap: 12px;
+      }
+
+   
+      .details-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 28px;
+        padding: 30px 7% 70px;
+      }
+
+
+      .detail-card {
+        background: white;
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 8px 24px rgba(127, 179, 255, 0.1);
+        margin-bottom: 24px;
+      }
+
+      .detail-card h2 {
+        font-size: 18px;
+        color: #2e3a4f;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #f0f4ff;
+      }
+
+     
+      .detail-card p {
+        font-size: 15px;
+        color: #5b7aab;
+        line-height: 1.8;
+      }
+
+  
+      .topics-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .topics-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        color: #2e3a4f;
+        padding: 10px 14px;
+        background: #f7f9ff;
+        border-radius: 10px;
+      }
+
+      .topics-list li span.num {
+        width: 26px;
+        height: 26px;
+        background: linear-gradient(135deg, #fff8db, #ffe566);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: #c49a00;
+        flex-shrink: 0;
+      }
+
+    
+      .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      .schedule-table th {
+        background: #f0f4ff;
+        color: #5b7aab;
+        padding: 10px 14px;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .schedule-table td {
+        padding: 10px 14px;
+        border-bottom: 1px solid #8fadff;
+        color: #2e3a4f;
+      }
+
+      .schedule-table tr:last-child td {
+        border-bottom: none;
+      }
+
+   
+      .sidebar .detail-card {
+        margin-bottom: 20px;
+      }
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f4ff;
+        font-size: 14px;
+      }
+
+      .info-row:last-child {
+        border-bottom: none;
+      }
+
+      .info-row .label {
+        color: #94a3b8;
+      }
+
+      .info-row .value {
+        color: #2e3a4f;
+        font-weight: 600;
+      }
+
+      
+      .grading-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .grading-item .g-label {
+        font-size: 14px;
+        color: #2e3a4f;
+      }
+
+      .grading-bar-wrap {
+        flex: 1;
+        margin: 0 12px;
+        background: #f0f4ff;
+        border-radius: 10px;
+        height: 8px;
+        overflow: hidden;
+      }
+
+      .grading-bar {
+        height: 100%;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #5b9dff, #a0c4ff);
+      }
+
+      .grading-item .g-percent {
+        font-size: 13px;
+        font-weight: bold;
+        color: #5b9dff;
+        min-width: 36px;
+        text-align: right;
+      }
+
+    
+      .enroll-btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background: #5b9dff;
+        color: white;
+        border: none;
+        border-radius: 14px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 6px 18px rgba(91, 157, 255, 0.25);
+      }
+
+      .enroll-btn:hover {
+        transform: translateY(-2px);
+        background: #3d87f5;
+      }
+
+     
+      @media (max-width: 900px) {
+        .details-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .page-hero {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .page-hero-text h1 {
+          font-size: 26px;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <header>
+      <div class="logo">UniPortal</div>
+      <nav>
+        <a href="##">Home</a>
+        <a href="##">About</a>
+        <a href="##">Departments</a>
+        <a href="##" style="color:#ffb6c9;">Courses</a>
+        <a href="##">News</a>
+        <a href="##">Contact</a>
+        <a href="instructors/instructors.html">Instructors</a>
+      </nav>
+     
+    </header>
+
+    <main>
+    <a href="courses.html" class="back-btn">← Back to Courses</a>
+
+    
+    <section class="page-hero">
+      <div class="page-hero-icon">🌐</div>
+      <div class="page-hero-text">
+        <h1>Web Programming</h1>
+        <p> _ Information security Department</p>
+        <div class="page-hero-tags">
+          <span class="tag">HTML/CSS</span>
+          <span class="tag purple">JavaScript</span>
+          <span class="tag yellow">3 hrs</span>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="details-layout">
+
+     
+      <div class="main-col">
+
+  
+        <div class="detail-card">
+          <h2>📋 Course Description</h2>
+          <p>
+            This course introduces students to the fundamentals of web development.
+            Students will learn how to build modern, responsive websites using HTML, CSS,
+            and JavaScript. Topics include page structure, styling, interactivity,
+            and an introduction to frontend frameworks.
+          </p>
+        </div>
+
+     
+        <div class="detail-card">
+          <h2>📌 Topics Covered</h2>
+          <ul class="topics-list">
+            <li><span class="num">1</span> Introduction to HTML & Page Structure</li>
+            <li><span class="num">2</span> CSS Styling & Layouts (Flexbox & Grid)</li>
+            <li><span class="num">3</span> Responsive Web Design</li>
+            <li><span class="num">4</span> JavaScript Fundamentals</li>
+            <li><span class="num">5</span> Forms & Input Validation</li>
+            <li><span class="num">6</span> Frontend Development Tools</li>
+            <li><span class="num">6</span> PHP Fundamentals</li>
+          </ul>
+        </div>
+
+     
+        <div class="detail-card">
+          <h2>🗓️ Schedule</h2>
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                <td>Lecture</td>
+                <td>Tuesday</td>
+                <td>10:00 – 12:00</td>
+                <td>Hall 8 </td>
+              </tr>
+              <tr>
+                <td>Section</td>
+                <td>Thursday</td>
+                <td>09:00 – 11:00</td>
+                <td>Lab 4 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+     
+      <div class="sidebar">
+
+     
+        <div class="detail-card">
+          <h2>ℹ️ Course Info</h2>
+          <div class="info-row">
+            <span class="label">Instructor</span>
+            <span class="value">Dr. Amr</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Credit Hours</span>
+            <span class="value">3 hrs</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Level</span>
+            <span class="value">Intermediate</span>
+          </div>
+          
+          <div class="info-row">
+            <span class="label">Department</span>
+            <span class="value">Information security</span>
+          </div>
+        </div>
+
+  
+        <div class="detail-card">
+          <h2>📊 Grading</h2>
+          <div class="grading-item">
+            <span class="g-label">Midterm+Assignments</span>
+            <div class="grading-bar-wrap">
+              <div class="grading-bar" style="width: 30%"></div>
+            </div>
+            <span class="g-percent">30%</span>
+          </div>
+          <div class="grading-item">
+            <span class="g-label">Final</span>
+            <div class="grading-bar-wrap">
+              <div class="grading-bar" style="width: 50%"></div>
+            </div>
+            <span class="g-percent">50%</span>
+          </div>
+          <div class="grading-item">
+            <span class="g-label">lab</span>
+            <div class="grading-bar-wrap">
+              <div class="grading-bar" style="width: 20%"></div>
+            </div>
+            <span class="g-percent">20%</span>
+          </div>
+        </div>
+
+
+        <a href="##" class="enroll-btn">📩 Enroll in Course</a>
+
+      </div>
+    </div>
+
+  </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>UniPortal</h3>
+          <p>Your one-stop academic portal for courses, announcements, and student services.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="##">Home</a>
+          <a href="##">Departments</a>
+          <a href="##">Courses</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Email: support@uniportal.edu</p>
+          <p>Phone: +20 100 000 0000</p>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 UniPortal. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>

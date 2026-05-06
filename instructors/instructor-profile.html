@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Dr. Amr - Dream University</title>
+    <style>
+ 
+      .page-hero {
+        background: linear-gradient(135deg, #fff8db, #fff0b0);
+        padding: 50px 7% 40px;
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .page-hero-avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #fff8db, #ffe566);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 44px;
+        box-shadow: 0 8px 24px rgba(255, 200, 0, 0.2);
+        flex-shrink: 0;
+      }
+
+      .page-hero-text h1 {
+        font-size: 36px;
+        color: #2e3a4f;
+        margin-bottom: 6px;
+      }
+
+      .page-hero-text p {
+        font-size: 15px;
+        color: #5b7aab;
+        margin-bottom: 12px;
+      }
+
+      .page-hero-tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        background: #eef4ff;
+        color: #5b9dff;
+      }
+
+      .tag.yellow { background: #fffbe6; color: #c49a00; }
+      .tag.green  { background: #edfff5; color: #35b87a; }
+
+ 
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 30px 7% 0;
+        color: #5b9dff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .back-btn:hover {
+        gap: 12px;
+      }
+
+ 
+      .profile-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 28px;
+        padding: 30px 7% 70px;
+      }
+
+   
+      .detail-card {
+        background: white;
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 8px 24px rgba(127, 179, 255, 0.1);
+        margin-bottom: 24px;
+      }
+
+      .detail-card h2 {
+        font-size: 18px;
+        color: #2e3a4f;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #f0f4ff;
+      }
+
+      .detail-card p {
+        font-size: 15px;
+        color: #5b7aab;
+        line-height: 1.8;
+      }
+
+   
+      .courses-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .courses-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        color: #2e3a4f;
+        padding: 10px 14px;
+        background: #f7f9ff;
+        border-radius: 10px;
+      }
+
+      .courses-list li span.icon {
+        font-size: 20px;
+      }
+
+    
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f4ff;
+        font-size: 14px;
+      }
+
+      .info-row:last-child {
+        border-bottom: none;
+      }
+
+      .info-row .label {
+        color: #94a3b8;
+      }
+
+      .info-row .value {
+        color: #2e3a4f;
+        font-weight: 600;
+      }
+
+     
+      .contact-btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background: #5b9dff;
+        color: white;
+        border: none;
+        border-radius: 14px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 6px 18px rgba(91, 157, 255, 0.25);
+        margin-top: 8px;
+      }
+
+      .contact-btn:hover {
+        transform: translateY(-2px);
+        background: #3d87f5;
+      }
+
+       
+      @media (max-width: 900px) {
+        .profile-layout {
+          grid-template-columns: 1fr;
+        }
+        .page-hero {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .page-hero-text h1 {
+          font-size: 26px;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+   
+    <header>
+      <div class="logo">UniPortal</div>
+      <nav>
+        <a href="##">Home</a>
+        <a href="##">About</a>
+        <a href="##">Departments</a>
+        <a href="##">Courses</a>
+        <a href="##">News</a>
+        <a href="##">Contact</a>
+        <a href="##">Instructors</a>
+      </nav>
+    </header>
+
+    <main>
+ 
+      <a href="instructors.html" class="back-btn">← Back to Instructors</a>
+
+ 
+      <section class="page-hero">
+        <div class="page-hero-avatar">👨‍🏫</div>
+        <div class="page-hero-text">
+          <h1>Dr. Amr</h1>
+          <p>  Computer Science Department</p>
+          <div class="page-hero-tags">
+            
+           
+          </div>
+        </div>
+      </section>
+
+ 
+      <div class="profile-layout">
+
+     
+        <div>
+
+     
+          <div class="detail-card">
+            <h2>👤 About</h2>
+            <p>
+              Dr. Amr is a faculty member in the Computer Science Department specializing
+              in web technologies and frontend development. He has been teaching at Dream
+              University for over 8 years and is known for his practical, project-based
+              teaching approach.
+            </p>
+          </div>
+
+         
+          <div class="detail-card">
+            <h2>📚 Courses Taught</h2>
+            <ul class="courses-list">
+              <li><span class="icon">🌐</span> Web Programming </li>
+              <li><span class="icon">🪧</span> human rights</li>
+              <li><span class="icon">📲</span> mobile app Development</li>
+            </ul>
+          </div>
+
+        </div>
+
+      
+        <div>
+
+       
+          <div class="detail-card">
+            <h2>ℹ️ Info</h2>
+            <div class="info-row">
+              <span class="label">Department</span>
+              <span class="value">Computer Science</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Position</span>
+              <span class="value">Assistant Professor</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Experience</span>
+              <span class="value">10+ Years</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Office</span>
+              <span class="value"> Third floor- 102</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Office Hours</span>
+              <span class="value">Sun & Tue 1–3 PM</span>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="detail-card">
+            <h2>📬 Contact</h2>
+            <div class="info-row">
+              <span class="label">Email</span>
+              <span class="value">amr@uniportal.edu</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Phone</span>
+              <span class="value">+20 100 000 0001</span>
+            </div>
+            <a href="##" class="contact-btn">📩 Send Email</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>UniPortal</h3>
+          <p>Your one-stop academic portal for courses, announcements, and student services.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="##">Home</a>
+          <a href="##">Departments</a>
+          <a href="##">Courses</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Email: support@uniportal.edu</p>
+          <p>Phone: +20 100 000 0000</p>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 UniPortal. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>

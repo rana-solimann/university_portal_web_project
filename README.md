@@ -35,7 +35,6 @@ university-portal/
 │   ├── dashboard.html
 │   ├── profile.html
 │   ├── grades.html
-│   └── timetable.html
 │
 ├── css/
 │   └── style.css
@@ -86,7 +85,6 @@ Student-only pages after login.
 - `dashboard.html`
 - `profile.html`
 - `grades.html`
-- `timetable.html`
 
 ---
 
