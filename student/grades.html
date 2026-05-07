@@ -4,19 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css">
-    <title>Grades</title>
+    <title>Grades - Dream University</title>
 </head>
 <body>
 
-    <header>
-        <div class="logo">UniPortal</div>
-        <nav>
+    <header class="site-header">
+        <a href="../index.html" class="logo">UniPortal</a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="../index.html">Home</a>
+            <a href="../pages/about.html">About</a>
+            <a href="../pages/departments.html">Departments</a>
+            <a href="../academic/courses.html">Courses</a>
+            <a href="../pages/news.html">News</a>
+            <a href="../pages/Contact.html">Contact</a>
+            <a href="../academic/instructors.html">Instructors</a>
+        </nav>
+        <div class="site-header-actions">
+            <a href="#" class="login-btn" onclick="logout(); return false;">Logout</a>
+        </div>
+    </header>
+
+    <div class="student-toolbar" aria-label="Student portal">
+        <nav class="student-toolbar-portal" aria-label="Your pages">
             <a href="dashboard.html">Dashboard</a>
             <a href="profile.html">Profile</a>
-            <a href="grades.html">Grades</a>
+            <a href="grades.html" class="is-current">Grades</a>
         </nav>
-        <a href="#" class="login-btn" onclick="logout(); return false;">Logout</a>
-    </header>
+        <div class="student-toolbar-back">
+            <a href="../index.html">← Home</a>
+            <span class="toolbar-dot">·</span>
+            <a href="dashboard.html">← Dashboard</a>
+            <span class="toolbar-dot">·</span>
+            <a href="profile.html">Profile →</a>
+        </div>
+    </div>
 
     <section class="grades-page">
 
@@ -154,13 +175,17 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>UniPortal</h3>
-                <p>Your one-stop academic portal.</p>
+                <p>Your one-stop academic portal for courses, announcements, and student services.</p>
             </div>
             <div class="footer-links">
-                <h4>Links</h4>
+                <h4>Quick Links</h4>
                 <a href="../index.html">Home</a>
-                <a href="../academic/departments.html">Departments</a>
-                <a href="../courses/courses.html">Courses</a>
+                <a href="../pages/about.html">About</a>
+                <a href="../pages/departments.html">Departments</a>
+                <a href="../academic/courses.html">Courses</a>
+                <a href="../pages/news.html">News</a>
+                <a href="../pages/Contact.html">Contact</a>
+                <a href="../academic/instructors.html">Instructors</a>
             </div>
             <div class="footer-contact">
                 <h4>Contact</h4>

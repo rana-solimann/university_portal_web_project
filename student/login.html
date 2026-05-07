@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css">
-    <title>Student Login</title>
+    <title>Student Login - Dream University</title>
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">UniPortal</div>
-        <nav>
+    <header class="site-header">
+        <a href="../index.html" class="logo">UniPortal</a>
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="../index.html">Home</a>
             <a href="../pages/about.html">About</a>
-            <a href="../academic/departments.html">Departments</a>
-            <a href="../courses/courses.html">Courses</a>
+            <a href="../pages/departments.html">Departments</a>
+            <a href="../academic/courses.html">Courses</a>
+            <a href="../pages/news.html">News</a>
+            <a href="../pages/Contact.html">Contact</a>
+            <a href="../academic/instructors.html">Instructors</a>
         </nav>
-        <a href="login.html" class="login-btn">Login</a>
+        <div class="site-header-actions">
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
     </header>
+
+    <div class="subpage-toolbar" aria-label="You are here">
+        <a href="../index.html">← Home</a>
+        <span class="toolbar-dot">·</span>
+        <span aria-current="page">Student login</span>
+    </div>
 
     <section class="login-page">
 
@@ -28,20 +41,47 @@
             <div id="error-msg" class="error-msg">Wrong ID or password. Please try again.</div>
 
             <label for="username">Student ID</label>
-            <input type="text" id="username" placeholder="e.g. 2310001" />
+            <input type="text" id="username" placeholder="e.g. 2310001" autocomplete="username" />
 
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" />
+            <input type="password" id="password" placeholder="Enter your password"
+                autocomplete="current-password" />
 
-            <button class="login-submit-btn" onclick="handleLogin()">Login</button>
+            <button class="login-submit-btn" type="button" onclick="handleLogin()">Login</button>
 
             <a href="../index.html" class="back-link">← Back to Home</a>
         </div>
 
     </section>
 
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>UniPortal</h3>
+                <p>Your one-stop academic portal for courses, announcements, and student services.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="../pages/about.html">About</a>
+                <a href="../pages/departments.html">Departments</a>
+                <a href="../academic/courses.html">Courses</a>
+                <a href="../pages/news.html">News</a>
+                <a href="../pages/Contact.html">Contact</a>
+                <a href="../academic/instructors.html">Instructors</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: support@uniportal.edu</p>
+                <p>Phone: +20 100 000 0000</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 UniPortal. All rights reserved.</p>
+    </footer>
+
     <script src="../js/students.js"></script>
     <script src="../js/login.js"></script>
 
 </body>
+
 </html>
